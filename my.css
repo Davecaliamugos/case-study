@@ -292,6 +292,22 @@ footer {
 #home, #services, #aboutus, #products, #categories, #contact {
     scroll-margin-top: 90px;
 }
+/* Hamburger Button */
+  .hamburger {
+    display: none; /* Hidden on desktop */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 28px;
+    height: 22px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1100;
+  }
+  .hamburger div {
+    width: 28px;
+  }
 /* Very small mobile phones and narrow devices */
 @media (max-width: 350px) {
     nav ul {
