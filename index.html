@@ -12,6 +12,7 @@
 <header>
         <div class="ul-li">
             <nav>
+                <button class="hamburger" aria-label="Toggle menu" aria-expanded="false"></button>
                 <div class="nav-brand" tabindex="0">GroceryGo</div>
               <ul>
                   <li><a href="#home">Home</a></li>
@@ -198,6 +199,17 @@
             &copy; 2025 Grocery Store. All rights reserved. | Visit us for fresh produce and great deals!
         </marquee>
     </footer>
+    <script>
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('nav ul');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('open');
+    // Update aria-expanded for accessibility
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', !expanded);
+  });
+</script>
 </body>
 
 </html>
